@@ -12,22 +12,24 @@
         <div class="row">
             <div id="templatemo_contact" class="col-md-4 gallery-contact">
             </div>
-            <div class="col-md-8 templatemo_contactform">
-                <div class="templatemo_contacttitle">CONTACTO</div>
-                <div class="templatemo_sub_contacttitle">Si requieres un subtitulo escribelo aquí</div>
-                <p> Escribe aquí el mensaje que quieres presentar si es necesario.</p>
-
-                <form action="enviar.php" method="post">
-                    <input type="text" name="name" id="name" class="name" placeholder="NOMBRE">
-                    <input type="text" name="mail" id="mail" class="email" placeholder="CORREO">
-                    <input type="text" name="phone" id="subject" class="subject" placeholder="TELÉFONO">
-                    <textarea name="message" class="message" placeholder="MENSAJE ... " id="message"></textarea>
-                    <div class="clear"></div>
-                    <div class="col-md-8">
-                        <button type="submit" class="btn btn-primary">ENVIAR </button>
-                    </div>
-                </form>
-            </div>
+            <form method='POST' action='/enviar.php'>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" name='nombre' id="nombre" placeholder="nombre...">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name='email' id="email" placeholder="email...">
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">Mensaje</label>
+                    <textarea class="form-control" name='mensaje' id="mensaje" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" required> Acepto la política de privacidad.
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
 
     </body>
 
